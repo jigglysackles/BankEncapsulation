@@ -4,7 +4,19 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            //create account and set account numbers
+            var bankAccount = new BankAccount();
+            bankAccount.SetAccountNumberChecking("C123");
+            bankAccount.SetAccountNumberSavings("S123");
+            
+            
+            
+            
+
+
+
+
+
         }
     }
 }

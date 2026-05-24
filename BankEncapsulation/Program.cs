@@ -322,6 +322,14 @@ namespace BankEncapsulation
                                         Console.WriteLine($"Total Balance: {bankAccount.TotalBalance()}");
                                         exitTransChecking = true;
                                     }
+
+                                    else
+                                    {
+                                        Console.WriteLine("Incorrect input or insufficient funds.");
+                                        Console.WriteLine("Press Enter to continue.");
+                                        Console.ReadLine();
+                                        exitTransChecking = true;
+                                    }
                                 } while (!exitTransChecking);
 
                                 break;
@@ -350,6 +358,14 @@ namespace BankEncapsulation
                                         Console.WriteLine($"Savings: {bankAccount.GetBalanceSavings()}");
                                         Console.WriteLine($"Checking: {bankAccount.GetBalance()}");
                                         Console.WriteLine($"Total Balance: {bankAccount.TotalBalance()}");
+                                        exitTransSavings = true;
+                                    }
+                                    
+                                    else
+                                    {
+                                        Console.WriteLine("Incorrect input or insufficient funds.");
+                                        Console.WriteLine("Press Enter to continue.");
+                                        Console.ReadLine();
                                         exitTransSavings = true;
                                     }
                                 } while (!exitTransSavings);

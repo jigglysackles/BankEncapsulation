@@ -4,6 +4,16 @@ using System;
 
 public class Menu
 {
+    public void Welcome()
+    {
+        Console.WriteLine("\nPlease choose from the following menu:");
+        Console.WriteLine("1. Checking");
+        Console.WriteLine("2. Savings");
+        Console.WriteLine("3. Transfers");
+        Console.WriteLine("4. Get Balances");
+        Console.WriteLine("5. Quit the ATM");
+    }
+
     public void Checking()
     {
         Console.WriteLine("\nChecking is selected!");
@@ -30,6 +40,7 @@ public class Menu
         Console.WriteLine("Which account do you want to transfer from?");
         Console.WriteLine("1. Checking");
         Console.WriteLine("2. Savings");
-        Console.WriteLine("3. Exit");
+        Console.WriteLine("3. Check Balances");
+        Console.WriteLine("4. Exit");
     }
 }

@@ -72,18 +72,28 @@ public class BankAccount
         return _balance + _balanceSavings;
     }
 
-    public void Transfer(double amountToTransfer, string fromAccount, string toAccount)
+    public void TransferFromChecking(double amountToTransfer)
     {
-        if (fromAccount == AccountNumberChecking && _balance < amountToTransfer)
+        if (_balance >= amountToTransfer)
         {
             _balance -= amountToTransfer;
             _balanceSavings += amountToTransfer;
         }
-        else if (fromAccount == AccountNumberSavings && _balanceSavings < amountToTransfer)
+
+        else
+        {
+            Console.WriteLine("Invalid account number or transfer amount.");
+        }
+    }
+
+    public void TransferFromSavings(double amountToTransfer)
+    {
+        if (_balanceSavings >= amountToTransfer)
         {
             _balanceSavings -= amountToTransfer;
             _balance += amountToTransfer;
         }
+
         else
         {
             Console.WriteLine("Invalid account number or transfer amount.");
